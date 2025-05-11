@@ -39,7 +39,8 @@ public class ConsultaMoneda {
                     throw new NumberFormatException("Ingrese un numero valido ");
 
             }
-            URI direccion = URI.create("https://v6.exchangerate-api.com/v6/ce488696d7cf70b950727b7f/latest/" + monedaOriginal);
+            var APIKEY= "ce488696d7cf70b950727b7f";
+            URI direccion = URI.create("https://v6.exchangerate-api.com/v6/"+APIKEY+"/latest/" + monedaOriginal);
             HttpClient client = HttpClient.newHttpClient();
             HttpRequest request = HttpRequest.newBuilder()
                     .uri(direccion)

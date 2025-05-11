@@ -1,15 +1,8 @@
 [
  Registro de Cambio: 
  Codigo de moneda original= USD
- Cantidad a convertir= 74.0
+ Cantidad a convertir= 75.0
  Codigo de moneda final= COP
- Cantidad final= 318798.44
- Marca de Tiempo = 11-05-2025 12:56:43
-, 
- Registro de Cambio: 
- Codigo de moneda original= USD
- Cantidad a convertir= 85.0
- Codigo de moneda final= ARS
- Cantidad final= 94654.3
- Marca de Tiempo = 11-05-2025 12:56:46
+ Cantidad final= 323106.53
+ Marca de Tiempo = 11-05-2025 13:25:57
 ]
