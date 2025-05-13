@@ -1,4 +1,5 @@
 import com.google.gson.Gson;
+import io.github.cdimascio.dotenv.Dotenv;
 
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -39,8 +40,11 @@ public class ConsultaMoneda {
                     throw new NumberFormatException("Ingrese un numero valido ");
 
             }
-            var APIKEY= "ce488696d7cf70b950727b7f";
-            URI direccion = URI.create("https://v6.exchangerate-api.com/v6/"+APIKEY+"/latest/" + monedaOriginal);
+            Dotenv dotenv = Dotenv.load();
+            var apiKey = dotenv.get("API_KEY");
+            //se necesito kotlin y dotenv y gson library
+
+            URI direccion = URI.create("https://v6.exchangerate-api.com/v6/"+apiKey+"/latest/" + monedaOriginal);
             HttpClient client = HttpClient.newHttpClient();
             HttpRequest request = HttpRequest.newBuilder()
                     .uri(direccion)
