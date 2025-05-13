@@ -6,6 +6,8 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
+
+//se necesito kotlin y dotenv y gson library
 public class ConsultaMoneda {
     public Moneda buscaMoneda(int numeroOpcion) {
         var monedaOriginal = "";
@@ -42,7 +44,6 @@ public class ConsultaMoneda {
             }
             Dotenv dotenv = Dotenv.load();
             var apiKey = dotenv.get("API_KEY");
-            //se necesito kotlin y dotenv y gson library
 
             URI direccion = URI.create("https://v6.exchangerate-api.com/v6/"+apiKey+"/latest/" + monedaOriginal);
             HttpClient client = HttpClient.newHttpClient();
